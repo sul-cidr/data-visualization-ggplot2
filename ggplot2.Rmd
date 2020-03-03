@@ -8,6 +8,7 @@ output:
     toc_float: yes
   pdf_document:
     toc: yes
+
 ---
 
 ```{r, include=FALSE}
@@ -115,7 +116,9 @@ class: center, middle
 
 ```{r echo=FALSE, eval= TRUE, out.width="100%"}
 wa_plot <- stops %>% filter(state == "WA") %>% 
-  ggplot(aes(x = quarter , y = search_rate_100, color = driver_race, group = interaction(legalization_status, driver_race))) + 
+  ggplot(aes(x = quarter , y = search_rate_100, 
+             color = driver_race, 
+             group = interaction(legalization_status, driver_race))) + 
   geom_point(size = 2) + 
   stat_smooth(method = lm , se = FALSE) +
   theme_minimal(base_size = 12) +
@@ -130,8 +133,14 @@ wa_plot <- stops %>% filter(state == "WA") %>%
         plot.caption = element_text(size = 6),
         legend.title = element_blank()) + 
   scale_x_date(date_breaks = "1 year", date_labels = "%Y") + 
-  geom_curve(color = "gray", x = 16000, y = .43, xend = 15750, yend = .42, angle = 90, arrow = arrow(length = unit(0.02, "npc"))) +
-  annotate("text", x = as.Date("2014-04-01"), y = .38, label = "searches plummet\nafter legalization", size = 2.5) 
+  geom_curve(color = "gray", 
+             x = 16000, 
+             y = .43, xend = 15750, 
+             yend = .42, 
+             angle = 90, 
+             arrow = arrow(length = unit(0.02, "npc"))) +
+  annotate("text", x = as.Date("2014-04-01"), y = .38, 
+           label = "searches plummet\nafter legalization", size = 2.5) 
 
 wa_plot
 ```
@@ -433,7 +442,6 @@ stops %>%
 ```
 
 ---
-## Building up layer by layer
 
 ### Basic plot
 
@@ -730,11 +738,13 @@ ggplot(data = stops, aes(x = quarter, y = search_rate_100, color = driver_race))
 
 ```{r}
 
-wa_stops <- stops %>% filter(state == "WA") %>% ggplot(aes(x = quarter, y = search_rate_100, color = driver_race)) + 
+wa_stops <- stops %>% filter(state == "WA") %>% 
+  ggplot(aes(x = quarter, y = search_rate_100, color = driver_race)) + 
   geom_smooth(se = FALSE) + 
   labs(title = "Washington")
 
-co_stops <- stops %>% filter(state == "CO") %>% ggplot(aes(x = quarter, y = search_rate_100, color = driver_race)) + 
+co_stops <- stops %>% filter(state == "CO") %>% 
+  ggplot(aes(x = quarter, y = search_rate_100, color = driver_race)) + 
   geom_smooth(se = FALSE) + 
   labs(title = "Colorado") + 
   theme(legend.position = "none")
