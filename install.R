@@ -1,2 +1,2 @@
-install.packages(c("dplyr","ggplot2", "ggrepel", "plotly")) 
+install.packages(c("knitr","tidyverse", "ggrepel", "plotly")) 
 devtools::install_github("thomasp85/patchwork")
