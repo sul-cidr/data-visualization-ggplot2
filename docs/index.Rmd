@@ -325,12 +325,12 @@ happen when you map aesthetics to  discrete and continuous variables?
 What happens when you use more than one aesthetic?
 
 ```{r, eval=FALSE}
-ggplot(data = stops, aes(x = quarter, y = search_rate_100, color = driver_race)) +
-  geom_smooth(se = FALSE, method = "loess") +
-  scale_color_viridis_d() +
-  theme_minimal() +
-  labs(x = "Year", y = "Search Rate", color = "Driver Race",
-       title = "Washington stops", subtitle = "Number of stops before and after legalization")
+stops %>% ggplot(aes(x = quarter , y = search_rate_100, color = driver_race)) + 
+  geom_point() + 
+  theme_minimal(base_size = 12) +
+  labs(title = "Washington") + ## scale_fill for 2d objects like bars, scale_color for lines
+  #scale_color_brewer(type = qual, palette = "Dark2") 
+  theme(legend.title = element_blank()) + scale_x_date(date_breaks = "1 year", date_labels = "%Y")  
 ```
 
 
