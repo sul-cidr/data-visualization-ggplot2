@@ -12,6 +12,11 @@ output:
 ---
 
 ```{r, include=FALSE}
+install.packages("devtools")
+install.packages("tidyverse")
+install.packages("ggrepel")
+install.packages("plotly")
+install.packages("knitr")
 devtools::install_github("thomasp85/patchwork")
 
 ```
