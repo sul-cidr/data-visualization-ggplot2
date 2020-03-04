@@ -575,7 +575,7 @@ pre_legalization_high <- stops %>%
 ggplot(stops, aes(x = quarter, y = search_rate_100, color = driver_race)) +
   geom_point(data = pre_legalization_high, size = 5, color = "gray") +
   geom_point() +
-  geom_text(data = pre_legalization_high, aes(y = search_rate_100, label = search_rate_100), 
+  geom_text(data = pre_legalization_high, aes(y = search_rate_100 + .05, label = search_rate_100), 
             size = 2, color = "black")
 ```
 
