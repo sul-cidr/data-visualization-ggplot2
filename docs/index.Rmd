@@ -2,7 +2,7 @@
 title: "Data Visualization in R with ggplot2"
 subtitle: "Stanford University Libraries"
 author: "Josh Quan"
-date: "04 March 2020 <br><br> cidr.link/"
+date: "04 March 2020 <br><br> cidr.link/ggplot2"
 output:
   xaringan::moon_reader:
     lib_dir: libs
