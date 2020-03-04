@@ -643,20 +643,19 @@ ggplot(stops, aes(x = quarter, y = search_rate_100, group = driver_race)) +
 
 ---
 
-### Specifying colors
+### More on colors
 
-```{r, fig.height=1.8}
+```{r, message = FALSE, fig.height=1.8}
 ggplot(stops, aes(x = quarter, y = search_rate_100, color = driver_race)) +
   scale_color_manual(values = c("#FF6EB4", "#00BFFF", "#008B8B")) + 
   geom_smooth(se = FALSE)
-
 ```
 ---
 
 ### Splitting over facets
 
 
-```{r, fig.height=1.8}
+```{r, message = FALSE, fig.height=1.8}
 
 ggplot(data = stops, aes(x = quarter, y = search_rate_100)) +
   geom_line() +
