@@ -850,25 +850,33 @@ plotly::ggplotly(wa_stops)
 .pull-left[
 **Final Exercise:** [Recreate this chart](https://www.nbcnews.com/news/us-news/police-searches-drop-dramatically-states-legalized-marijuana-n776146)
 
-```{r echo=FALSE, out.width="85%", out.height="85%"}
+```{r echo=FALSE, out.width="75%", out.height="85%"}
 knitr::include_graphics("./img/cnbc.png")
 ```
 ]
 
 .pull-right[
 
-* Play with themes and adjust titles, subtitles, captions, etc.*
+#### Some code to get you started:
 
-* Bonus: Show Washington and Colorado side by side *
+```{r, eval=FALSE}
 
-#### some psuedo-code to get you started
-
-```{r}
-
-
+stops %>% filter(state == "WA") %>% 
+  ggplot(aes(quarter, search_rate_100, color = driver_race)) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE) 
 
 ```
 
+- '?labs' layer controls title, subtitle, caption, etc.
+
+- '?scale_color_manual' layer allows you to specify your own colors for the levels
+
+- '?geom_vline' layer draws a vertical line across the plot. (hint: the x-axis is a date data type)
+
+- '?theme' controls the non-data elements of the plot like size of text, angle of axis ticks, etc.
+
+- '?annotate' creates a text annotation layer. Same trick with coordinates as geom_vline
 
 ]
 

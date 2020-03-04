@@ -813,14 +813,29 @@ plotly::ggplotly(wa_stops)
 knitr::include_graphics("./img/cnbc.png")
 ```
 
-**** Bonus: Add Colorado to the chart using the Patchwork library
-**** Play with themes and adjust titles, subtitles, captions, etc.
 
+Starter code:
 ```{r}
-
-
+stops %>% filter(state == "WA") %>% 
+  ggplot(aes(quarter, search_rate_100, color = driver_race)) +
+  geom_point() +
+  geom_smooth(method = lm, se = FALSE) 
 
 ```
+
+- '?labs' layer controls title, subtitle, caption, etc.
+
+- '?scale_color_manual' layer allows you to specify your own colors to the levels
+
+- '?geom_vline' layer draws a vertical line across the plot. (hint: the x-axis is a date data type)
+
+- '?theme' controls the non-data elements of the plot like size of text, angle of axis ticks, etc.
+
+- '?annotate' creates a text annotation layer. Same trick with coordinates as geom_vline
+
+- Experiment with [themes](https://ggplot2.tidyverse.org/reference/ggtheme.html)
+
+
 
 
 ## Themes Vignette
