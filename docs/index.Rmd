@@ -418,6 +418,23 @@ ggplot(stops, aes(x = quarter, y = search_rate_100)) +
 
 ---
 
+## Assign ggplot() to objects for layering
+
+```{r, fig.height=2}
+
+p <- ggplot(stops, aes(x = quarter, y = search_rate_100)) +
+  geom_point()
+
+p + geom_smooth()
+
+
+
+```
+
+
+
+---
+
 class: center, middle
 
 # Common early pitfalls
@@ -492,7 +509,7 @@ ggplot(data = stops, aes(x = quarter, y = search_rate_100)) +
 ---
 
 
-## The power of groups
+## Grouping with colors
 
 ```{r, fig.height=2}
 ggplot(data = stops, aes(x = quarter, y = search_rate_100, color = driver_race)) +
@@ -507,7 +524,7 @@ ggplot(data = stops, aes(x = quarter, y = search_rate_100, color = driver_race))
 
 ```{r, fig.height=2}
 ggplot(data = stops, aes(x = quarter, y = search_rate_100, color = driver_race)) +
-  geom_smooth(span = 0.2, se = FALSE)
+  geom_smooth(span = .2, se = FALSE)
 
 ```
 
@@ -528,7 +545,7 @@ ggplot(data = stops, aes(x = quarter, y = search_rate_100, color = driver_race))
 ## Your turn!
 
 **Exercise:** Work with your neighbor to sketch what the following plots will 
-look like. No cheating! Do not run the code, just think through the code for 
+look like. Do not run the code, just think through the code for 
 the time being.
 
 ```{r}
@@ -636,7 +653,7 @@ ggplot(stops, aes(x = quarter, y = search_rate_100, color = driver_race)) +
 
 ```{r, fig.height=1.8}
 
-ggplot(stops, aes(x = quarter, y = search_rate_100, group = driver_race)) +
+ggplot(stops, aes(x = quarter, y = search_rate_100, color = driver_race)) +
   geom_smooth(color = "blue")
 
 ```
@@ -769,7 +786,7 @@ ggplot(data = stops, aes(x = quarter, y = search_rate_100, color = driver_race))
 
 ggplot(data = stops, aes(x = quarter, y = search_rate_100, color = driver_race)) +
   geom_point() +
-  theme(axis.text.x = element_text(angle = 90))
+  theme(axis.text.x = element_text(angle = 45))
 
 ```
 
@@ -844,6 +861,14 @@ knitr::include_graphics("./img/cnbc.png")
 
 * Bonus: Show Washington and Colorado side by side *
 
+#### some psuedo-code to get you started
+
+```{r}
+
+
+
+```
+
 
 ]
 
@@ -912,6 +937,7 @@ knitr::include_graphics("./img/ggplot2-template.png")
 ## Learn more
 
 * Books: 
+  - [ggplot2 documentation](https://ggplot2.tidyverse.org/reference/)
   - [R for Data Science](https://r4ds.had.co.nz) by Grolemund and Wickham
   - [R Graphics Cookbook](http://www.cookbook-r.com/Graphs/) by Chang
   - [Data Visualization: A Practical Introduction](https://kieranhealy.org/publications/dataviz/) by Healy
