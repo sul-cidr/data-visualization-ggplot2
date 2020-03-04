@@ -849,7 +849,7 @@ wa_stops + co_stops
 ---
 ### Interactivity
 
-```{r, out.width= "80%", out.height="60%"}
+```{r, out.width= "80%", message = FALSE, out.height="50%"}
 wa_stops <- wa_stops + geom_point()
 plotly::ggplotly(wa_stops)
 
