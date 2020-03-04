@@ -636,7 +636,7 @@ ggplot(stops, aes(x = quarter, y = search_rate_100, color = driver_race)) +
 
 ```{r, fig.height=1.8}
 
-ggplot(stops, aes(x = quarter, y = search_rate_100, color = driver_race)) +
+ggplot(stops, aes(x = quarter, y = search_rate_100, group = driver_race)) +
   geom_smooth(color = "blue")
 
 ```
