@@ -2,7 +2,7 @@
 title: "Data Visualization in R with ggplot2"
 subtitle: "Stanford University Libraries"
 author: "Josh Quan"
-date: "04 March 2020 <br><br> cidr.link/ggplot2"
+date: "19 February 2021 <br><br> cidr.link/ggplot2"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -114,18 +114,22 @@ knitr::include_graphics("./img/tidy-workflow-packages.png")
 - Download the materials at and launch `ggplot2.Rproj`
 - Install `tidyverse` if you haven't done so before, or if you haven't updated it recently
 ```{r, message=FALSE, eval=FALSE}
-install.packages("devtools")
-install.packages("tidyverse")
-install.packages("ggrepel")
-install.packages("plotly")
-devtools::install_github("thomasp85/patchwork")
+install.packages("ggplot2", repos = 'http://cran.us.r-project.org')
+install.packages("dplyr", repos = 'http://cran.us.r-project.org')
+install.packages("readr", repos = 'http://cran.us.r-project.org')
+install.packages("ggrepel", repos = 'http://cran.us.r-project.org')
+install.packages("plotly", repos = 'http://cran.us.r-project.org')
+install.packages("knitr", repos = 'http://cran.us.r-project.org')
+install.packages("patchwork", repos = 'http://cran.us.r-project.org'))
 ```
 - Load libraries
 
 ```{r, message=FALSE}
-library(tidyverse)
-library(ggrepel)
+library(ggplot2)
+library(dplyr)
+library(readr)
 library(plotly)
+library(ggrepel)
 library(patchwork)
 ```
 - Open `ggplot2.Rmd` to follow along in markdown document
