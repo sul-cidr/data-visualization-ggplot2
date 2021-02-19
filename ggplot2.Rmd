@@ -1,7 +1,7 @@
 ---
 title: "Data Visualization in R with ggplot2"
 author: "Josh Quan"
-date: "3/4/2020"
+date: "2/19/2021"
 output:
   html_document:
     toc: yes
@@ -12,19 +12,23 @@ output:
 ---
 
 ```{r, include=FALSE, eval=FALSE}
-install.packages("devtools", repos = 'http://cran.us.r-project.org')
-install.packages("tidyverse", repos = 'http://cran.us.r-project.org')
+#install.packages("devtools", repos = 'http://cran.us.r-project.org')
+#install.packages("tidyverse", repos = 'http://cran.us.r-project.org')
+install.packages("ggplot2", repos = 'http://cran.us.r-project.org')
+install.packages("dplyr", repos = 'http://cran.us.r-project.org')
+install.packages("readr", repos = 'http://cran.us.r-project.org')
 install.packages("ggrepel", repos = 'http://cran.us.r-project.org')
 install.packages("plotly", repos = 'http://cran.us.r-project.org')
 install.packages("knitr", repos = 'http://cran.us.r-project.org')
-
-devtools::install_github("thomasp85/patchwork")
+install.packages("patchwork", repos = 'http://cran.us.r-project.org'))
 
 ```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(tidyverse)
+library(ggplot2)
+library(dplyr)
+library(readr)
 library(plotly)
 library(ggrepel)
 library(patchwork)
