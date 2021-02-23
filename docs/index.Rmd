@@ -111,8 +111,8 @@ knitr::include_graphics("./img/tidy-workflow-packages.png")
 
 ## Following along...
 
-- Download the materials at and launch `ggplot2.Rproj`
-- Install `tidyverse` if you haven't done so before, or if you haven't updated it recently
+- Download the materials at cidr.link/ggplot2 and launch `ggplot2.Rproj`
+
 ```{r, message=FALSE, eval=FALSE}
 install.packages("ggplot2", repos = 'http://cran.us.r-project.org')
 install.packages("dplyr", repos = 'http://cran.us.r-project.org')
@@ -120,7 +120,7 @@ install.packages("readr", repos = 'http://cran.us.r-project.org')
 install.packages("ggrepel", repos = 'http://cran.us.r-project.org')
 install.packages("plotly", repos = 'http://cran.us.r-project.org')
 install.packages("knitr", repos = 'http://cran.us.r-project.org')
-install.packages("patchwork", repos = 'http://cran.us.r-project.org'))
+install.packages("patchwork", repos = 'http://cran.us.r-project.org')
 ```
 - Load libraries
 

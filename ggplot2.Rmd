@@ -20,7 +20,7 @@ install.packages("readr", repos = 'http://cran.us.r-project.org')
 install.packages("ggrepel", repos = 'http://cran.us.r-project.org')
 install.packages("plotly", repos = 'http://cran.us.r-project.org')
 install.packages("knitr", repos = 'http://cran.us.r-project.org')
-install.packages("patchwork", repos = 'http://cran.us.r-project.org'))
+install.packages("patchwork", repos = 'http://cran.us.r-project.org')
 
 ```
 
@@ -887,7 +887,7 @@ knitr::include_graphics("./img/ggplot2-template.png")
   - [R Graphics Cookbook](http://www.cookbook-r.com/Graphs/) by Chang
   - [Data Visualization: A Practical Introduction](https://kieranhealy.org/publications/dataviz/) by Healy
 * [ggplot2.tidyverse.org](https://ggplot2.tidyverse.org/)
-* [ggplot2 Cheat sheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
+* [ggplot2 Cheat sheet](https://rstudio.com/resources/cheatsheets/)
 
 
 
