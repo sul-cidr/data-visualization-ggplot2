@@ -2,7 +2,7 @@
 title: "Data Visualization in R with ggplot2"
 subtitle: "Stanford University Libraries"
 author: "Josh Quan"
-date: "19 February 2021 <br><br> cidr.link/ggplot2"
+date: "23 February 2021 <br><br> cidr.link/ggplot2"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -973,8 +973,8 @@ knitr::include_graphics("./img/ggplot2-template.png")
   - [R Graphics Cookbook](http://www.cookbook-r.com/Graphs/) by Chang
   - [Data Visualization: A Practical Introduction](https://kieranhealy.org/publications/dataviz/) by Healy
 * [ggplot2.tidyverse.org](https://ggplot2.tidyverse.org/)
-* [ggplot2 Cheat sheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
-* Contributed extensions: [ggplot2-exts.org](http://www.ggplot2-exts.org/)
+* [ggplot2 Cheat sheet](https://rstudio.com/resources/cheatsheets/)
+
 
 ---
 

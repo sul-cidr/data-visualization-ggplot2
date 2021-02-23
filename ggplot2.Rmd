@@ -1,7 +1,7 @@
 ---
 title: "Data Visualization in R with ggplot2"
 author: "Josh Quan"
-date: "2/19/2021"
+date: "2/23/2021"
 output:
   html_document:
     toc: yes
@@ -888,7 +888,6 @@ knitr::include_graphics("./img/ggplot2-template.png")
   - [Data Visualization: A Practical Introduction](https://kieranhealy.org/publications/dataviz/) by Healy
 * [ggplot2.tidyverse.org](https://ggplot2.tidyverse.org/)
 * [ggplot2 Cheat sheet](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf)
-* Contributed extensions: [ggplot2-exts.org](http://www.ggplot2-exts.org/)
 
 
 
